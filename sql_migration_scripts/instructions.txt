@@ -1,0 +1,6 @@
+- Run insert_all_proposals.sql
+- Run migrate_customers.sql
+- Run migrate_addresses.sql
+- Run update_proposal_customer_id.sql
+- Run update_proposal_address_id.sql
+- Run migrate_cart_items.sql

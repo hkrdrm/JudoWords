@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "reactUname",
+    "style": "css",
+    "postcss": true
+  }
+}
