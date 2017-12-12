@@ -27,7 +27,8 @@ class Answer extends React.Component {
   render(){
     const btnClass = this.state.isHovered ? 'animated pulse ' : ''
     return (
-      <span style={{margin: 5}} className={`${btnClass}badge badge-primary`} onTouchTap={this.props.onTouchTap} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>{this.props.answer}</span>
+      //<span style={{margin: 5}} className={`${btnClass}badge badge-primary`} onTouchTap={this.props.onTouchTap} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>{this.props.answer}</span>
+      <button type="button" className='btn btn-primary' onTouchTap={this.props.onTouchTap}>{this.props.answer}</button>
     ) 
   }
 }
@@ -49,7 +50,7 @@ class Quiz extends React.Component {
 
   componentWillMount(){
     this.setState({
-      questions: _.shuffle(this.reverseQuestionAnswer(this.state.questions)), 
+      questions: _.sortBy(this.reverseQuestionAnswer(this.state.questions), 'answer'), 
       unanswered_questions: this.reverseQuestionAnswer(this.state.unanswered_questions)
     })
   }
