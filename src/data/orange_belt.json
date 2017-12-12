@@ -1,0 +1,106 @@
+[
+  { 
+    "question": "Shido!", 
+    "answer":   "Note! (referee's call for slight penalty)"
+  },
+  {
+    "question": "Hansoku Make!",
+    "answer":   "Loss by rule violation (referree's call)"
+  },
+  {
+    "question": "Hantei!",   
+    "answer":   "Decision! (call by referee for judges' decision)"
+  },
+  {
+    "question": "Sono Mama!",   
+    "answer":   "Don't move! (referee's call)"
+  },
+  {
+    "question": "Yoshi!",   
+    "answer":   "Continue! (referee's call)"
+  },
+  {
+    "question": "Shizen Hontai",   
+    "answer":   "Fundamental natural posture"
+  },
+  {
+    "question": "Jigo Hontai",   
+    "answer":   "Fundamental defensive posture"
+  },
+  {
+    "question": "Harai/Barai",   
+    "answer":   "Sweeping action done with the leg"
+  },
+  {
+    "question": "Gari",   
+    "answer":   "Reaping action done with the leg"
+  },
+  {
+    "question": "Gake/Kake",   
+    "answer":   "Dashing action action done with the leg"
+  },
+  {
+    "question": "Hane",   
+    "answer":   "Springing action done with the leg"
+  },
+  {
+    "question": "Nage",   
+    "answer":   "Throw (noun)"
+  },
+  {
+    "question": "Waza",   
+    "answer":   "Technique(s)"
+  },
+  {
+    "question": "Nage Waza",   
+    "answer":   "Throwing Technique(s)"
+  },
+  {
+    "question": "Te",   
+    "answer":   "Hand"
+  },
+  {
+    "question": "Te Waza",   
+    "answer":   "Hand Techniques"
+  },
+  {
+    "question": "Ashi",   
+    "answer":   "Foot or leg"
+  },
+  {
+    "question": "Ashi Waza",   
+    "answer":   "Foot techniques"
+  },
+  {
+    "question": "O",   
+    "answer":   "Big or major"
+  },
+  {
+    "question": "Ko",   
+    "answer":   "Little or minor"
+  },
+  {
+    "question": "Goshi/Koshi",   
+    "answer":   "Waist or hip"
+  },
+  {
+    "question": "Koshi Waza",   
+    "answer":   "Waist or hip techniques"
+  },
+  {
+    "question": "Soto",   
+    "answer":   "Outside"
+  },
+  {
+    "question": "Uchi",   
+    "answer":   "Inside"
+  },
+  {
+    "question": "Ki",   
+    "answer":   "Internal force or spiritual energy"
+  },
+  {
+    "question": "Kiai",   
+    "answer":   "Shout to gather inner strength"
+  }
+]

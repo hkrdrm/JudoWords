@@ -8,34 +8,13 @@ import Navigation       from './navigation'
 import Redis            from './Redis'
 import config           from 'config'
 import _                from 'lodash'
-
 import { BrowserRouter as Router,
          IndexRoute,
          Route, Switch}  from 'react-router-dom'
 
-const questions = [
-  { 
-    question: 'Sensei', 
-    answer:   'Teacher or Instructor'
-  },
-  {
-    question: 'Dojo',
-    answer:   'Place or club where Judo is practiced'
-  },
-  {
-    question: 'Gi (Judogi)',   
-    answer:   'Judo Uniform'
-  },
-  {
-    question: 'Seiza',   
-    answer:   'Kneeling position'
-  },
-  {
-    question: 'Anza',   
-    answer:   'Sitting position with legs crossed'
-  },
-]
+import orange_belt      from '../data/orange_belt.json'
 
+const questions = orange_belt
 class Answer extends React.Component {
 
   constructor(){
@@ -81,7 +60,7 @@ class Quiz extends React.Component {
 
   buildQuestionPanel = (top) => {
     return (
-      <div style={{width: '100%', alignSelf: 'flex-start', margin: 25}} className='card'>
+      <div style={{alignSelf: 'stretch', marginTop: 25}} className='card'>
         <div className='card-body'>
           <h4 className='card-title'>Question {this.state.question_counter}</h4>
           <p className='card-text'>{top.question}</p>
@@ -95,9 +74,9 @@ class Quiz extends React.Component {
       return <Answer key={q.answer} onTouchTap={()=>{this.answerQuestion(q.answer)}} answer={q.answer} />
     })
     return (
-      <div style={{width: '100%', margin: 25}} className='card'>
+      <div style={{marginTop: 25}} className='card'>
         <div className='card-body'>
-          <h4 className='card-title'>Answers</h4>
+          <h4 className='card-title'>Choices</h4>
           {ary}
         </div>
       </div>
@@ -116,19 +95,32 @@ class Quiz extends React.Component {
         q.correct = false
         this.state.incorrect++
       }
+      q.response = answer
       this.state.answered_questions.push(q)
       this.state.question_counter++
       this.forceUpdate()
     }
   }
   buildAnsweredPanel = () => {
+    let correct = (
+      <div className="alert alert-success" role="alert">
+        <strong>Well done!</strong> Your answer was correct.
+      </div>
+    )
+    let incorrect = (
+      <div className="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong> Your answer was incorrect. 
+      </div>
+    )
     return _.map(_.reverse(this.state.answered_questions), (q)=>{
       return (
-        <div key={q.question_number} style={{width: '100%', margin: 25, alignSelf: 'flex-start'}} className='card'>
+        <div key={q.question_number} style={{marginTop: 25, alignSelf: 'flex-start'}} className='card'>
           <div className='card-body'>
             <h4 className='card-title'>Question {q.question_number}</h4>
             <p className='card-text'>{q.question}</p>
-            <p className='card-text'>{(q.correct ? 'Correct' : 'Incorrect')}</p>
+            <p className='card-text'>Your Answer: {q.response}</p>
+            <p className='card-text'>Correct Answer: {q.answer}</p>
+            {(q.correct ? correct : incorrect)}
           </div>
         </div>
       ) 
@@ -137,11 +129,12 @@ class Quiz extends React.Component {
 
   buildScorePanel = () => {
     return(
-      <div style={{width: '100%', margin: 25, alignSelf: 'flex-start'}} className='card'>
+      <div style={{marginTop: 25, alignSelf: 'flex-start'}} className='card'>
         <div className='card-body'>
           <h4 className='card-title'>Score</h4>
-          <p className='card-text'>Correct: {this.state.correct}</p>
-          <p className='card-text'>Incorrect: {this.state.incorrect}</p>
+          {this.state.correct + this.state.incorrect > 0 ? <p style={{whiteSpace: 'nowrap'}} className='card-text'>Percentage: {Math.round((this.state.correct/(this.state.incorrect + this.state.correct))*100)}%</p> : null }
+          <p style={{whiteSpace: 'nowrap'}} className='card-text'>Correct: {this.state.correct}</p>
+          <p style={{whiteSpace: 'nowrap'}} className='card-text'>Incorrect: {this.state.incorrect}</p>
         </div>
       </div>
     )
@@ -157,13 +150,13 @@ class Quiz extends React.Component {
     let answers = this.buildAnswersPanel()
     let score_panel = this.buildScorePanel()
     return (
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexFlow: 'row-wrap'}}>
-        <div style={{display: 'inline-flex', flexFlow: 'column', alignSelf: 'flex-start', alignItems: 'flex-start', margin: 10}}>
+      <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexFlow: 'row-wrap'}}>
+        <div style={{display: 'flex', flexGrow: 2, flexFlow: 'column', alignSelf: 'flex-start', alignItems: 'flex-start', margin: 10}}>
           {question}
+          {answers}
           {answered}
         </div>
-        <div style={{display: 'flex', flexFlow: 'row', alignSelf: 'flex-start', alignItems: 'flex-start', margin: 10}}>
-          {answers}
+        <div style={{display: 'flex', flexGrow: 3, flexFlow: 'row', alignSelf: 'flex-start', alignItems: 'flex-start', margin: 10}}>
           {score_panel}
         </div>
       </div>
