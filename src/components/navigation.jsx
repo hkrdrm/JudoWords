@@ -50,6 +50,7 @@ class Navigation extends React.Component {
           <NavbarBrand href='/'>Judo Quiz</NavbarBrand>
           <Nav className="mr-auto" navbar >
             <NavLink>Home</NavLink>
+            <NavLink href='/orange_belt.pdf'>Orange Belt Study Sheet</NavLink>
           </Nav>
 
         </Navbar>

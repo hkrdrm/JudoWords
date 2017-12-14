@@ -8,7 +8,7 @@
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist/",
     "copy_beta": "node copy_index.js",
-    "copy_dist": "cp src/prod.index.html dist/index.html",
+    "copy_dist": "cp src/prod.index.html dist/index.html & cp src/data/orange_belt.pdf dist/orange_belt.pdf",
     "dist": "npm run copy_dist & webpack --env=dist",
     "beta": "npm run copy_beta & webpack --env=beta",
     "copy:local": "node copy_to_localhost.js",
