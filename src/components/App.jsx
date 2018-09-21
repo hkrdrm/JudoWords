@@ -5,6 +5,7 @@ var alt = require("../alt-application.js")
 
 import Home       from './Home'
 import Quiz       from './Quiz'
+import GreenQuiz  from './GreenQuiz'
 import React      from 'react'
 import Navigation from './navigation'
 import Redis      from './Redis'
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Navigation />
               <Route path={`/Home`} component={Home} />
               <Route path={`/Quiz`} component={Quiz} />
+              <Route path={`/green_quiz`} component={GreenQuiz} />
           </div>
         </Router>
       </div>

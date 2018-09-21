@@ -1,0 +1,142 @@
+{
+  "throws": [
+    { 
+      "question": "Ogoshi", 
+      "answer":   "Large Hip Throw"
+    },
+    { 
+      "question": "Seoi Otoshi", 
+      "answer":   "Drop Knee Shoulder Throw"
+    },
+    { 
+      "question": "Osoto Gari", 
+      "answer":   "Large Outer Reap"
+    },
+    { 
+      "question": "Ippon Seoi Nage", 
+      "answer":   "One Arm Shoulder Throw"
+    },
+    { 
+      "question": "Morote Gari", 
+      "answer":   "Double Leg Takedown or 2 Handed Reap"
+    },
+    { 
+      "question": "Ouchi Gari", 
+      "answer":   "Large Inner Reap"
+    },
+    { 
+      "question": "Osoto Maki Komi", 
+      "answer":   "Large Outer Wrapping Throw"
+    }
+  ],
+
+  "hold_downs": [
+    { 
+      "question": "Kesa Gatame", 
+      "answer":   "Scarf' Hold"
+    },
+    { 
+      "question": "Yoko Shiho Gatame", 
+      "answer":   "Side Mount / Side Locking Four Corner Hold"
+    },
+    { 
+      "question": "Kata Gatame", 
+      "answer":   "Shoulder Hold / Arm Triange"
+    },
+    { 
+      "question": "Kami Shiho Gatame", 
+      "answer":   "Upper 4 Corner Hold / North South"
+    }
+  ],
+
+  "vocabulary": [
+    {
+      "question": "Yusei gachi", 
+      "answer":   "Decision Win!"
+    },
+    {
+      "question": "Hiki Wake", 
+      "answer":   "Draw Match!"
+    },
+    {
+      "question": "Waza Ari Awasete Ippon", 
+      "answer":   "A full point by adding two waza ari scores"
+    },
+    {
+      "question": "Newaza", 
+      "answer":   "Techniques from a supine position"
+    },
+    {
+      "question": "Shime/Jime", 
+      "answer":   "Choke"
+    },
+    {
+      "question": "Ju", 
+      "answer":   "The principal of gentleness or giving way"
+    },
+    {
+      "question": "Do", 
+      "answer":   "Way of life"
+    },
+    {
+      "question": "Jujitsu", 
+      "answer":   "Gentle arts"
+    },
+    {
+      "question": "Tokui waza", 
+      "answer":   "Favorite technique"
+    },
+    {
+      "question": "Bushido", 
+      "answer":   "Way of the warrior"
+    },
+    {
+      "question": "Budo", 
+      "answer":   "Martial Arts"
+    },
+    {
+      "question": "Kyu", 
+      "answer":   "Class of belt ranks in Judo below Black Belt"
+    },
+    {
+      "question": "Dan", 
+      "answer":   "Step of Degree in the Black Belt ranks"
+    },
+    {
+      "question": "Uchi Komi", 
+      "answer":   "Repetiition attack practice without throwing, done with partner"
+    },
+    {
+      "question": "Zarei", 
+      "answer":   "Kneeling bow"
+    },
+    {
+      "question": "Ritsurei", 
+      "answer":   "Standing bow"
+    },
+    {
+      "question": "Hiza", 
+      "answer":   "Knee"
+    },
+    {
+      "question": "Gatame", 
+      "answer":   "Lock or Hold"
+    },
+    {
+      "question": "Guruma", 
+      "answer":   "Wheel"
+    },
+    {
+      "question": "Yoko", 
+      "answer":   "Side or lateral"
+    },
+    {
+      "question": "Gokyu / Gokkyu", 
+      "answer":   "Fifth class"
+    },
+    {
+      "question": "Happo No Kuzushi", 
+      "answer":   "Formal eight direction of off-balancing"
+    }
+  ]
+}

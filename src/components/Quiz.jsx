@@ -13,6 +13,7 @@ import { BrowserRouter as Router,
          Route, Switch}  from 'react-router-dom'
 
 import orange_belt      from '../data/orange_belt.json'
+import green_belt       from '../data/orange_belt.json'
 
 const questions = orange_belt
 class Answer extends React.Component {
